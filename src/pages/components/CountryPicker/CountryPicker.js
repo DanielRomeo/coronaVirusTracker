@@ -4,7 +4,7 @@ import styles from './CountryPicker.module.css';
 
 
 const CountryPicker = () =>{
-	let M = window.M;
+	// let M = window.M;
 
 	useEffect( ()=>{
 		   //M.AutoInit();
