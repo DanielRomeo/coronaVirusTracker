@@ -35,6 +35,12 @@ function Navbar(){
 									Home
 								</Link>
 							</li>
+
+							 <li>
+							 	<Link to="./News">
+							 		News
+							 	</Link>
+							 </li>
 							
 						</ul>	
 					</div>
@@ -42,7 +48,10 @@ function Navbar(){
 				</div>
 			</nav>
 
+
+
         </div>
+
     )
 }
 

@@ -31,7 +31,8 @@ const LatestConfirmedCases = ()=>{
 
 
     return(
-    	<div>
+    	<div className="container">
+
     		<div className="row">
     			
     			<div className="col s12 m12 l12">
