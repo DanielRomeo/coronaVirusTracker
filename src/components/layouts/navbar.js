@@ -8,7 +8,7 @@ function Navbar(){
 
 
     const navbarstyles={
-        background: "balck",
+        background: "#D3D3D3",
        	color: "white"
     }
 
@@ -17,12 +17,12 @@ function Navbar(){
 
          
 			<nav>
-				<div style={navbarstyles} class="nav-wrapper">
+				<div style={navbarstyles} className="nav-wrapper">
 					<div className="container">
-						<a href="#" class="brand-logo">Coronavirus Stats Tracker</a>
-						<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<a href="https://macbase.co.za" className="brand-logo">Coronavirus Stats Tracker</a>
+						<ul id="nav-mobile" className="right hide-on-med-and-down">
 
-							<li>
+							<li className="hoverable">
 								<Link to="./SouthAfrica">
 									South Africa
 								</Link>
