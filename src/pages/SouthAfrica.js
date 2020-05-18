@@ -3,6 +3,7 @@ import React  from 'react';
 import Navbar from '../components/layouts/navbar.js';
 import LatestConfirmedCases from './components/SouthAfrica/LatestConfirmedCases.js';
 import TopData from './components/SouthAfrica/TopData.js';
+import BottomData from './components/SouthAfrica/BottomData.js';
 // import axios from 'axios';
 
 const SouthAfrica = ()=>{
@@ -13,10 +14,12 @@ const SouthAfrica = ()=>{
 	    	<Navbar></Navbar>
 
 	    	
-	    		<TopData ></TopData>
+	    		<TopData></TopData>
 
 	    		<LatestConfirmedCases></LatestConfirmedCases>
-			
+				
+				<br />
+				<BottomData></BottomData>
 	    </div>  
     )
 }

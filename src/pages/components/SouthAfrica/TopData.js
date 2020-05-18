@@ -72,8 +72,6 @@ const TopData = ()=>{
 
                     
                 {myBarGraph}
-                  {JSON.stringify(mydata)} 
-                }
     			
     			</div>
 	    	</div>
