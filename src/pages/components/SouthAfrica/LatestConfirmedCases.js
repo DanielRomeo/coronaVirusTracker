@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Bar from 'react-chartjs-2';
+import {Bar, Line} from 'react-chartjs-2';
 
 const LatestConfirmedCases = ()=>{
 

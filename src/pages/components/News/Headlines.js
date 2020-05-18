@@ -7,6 +7,7 @@ import M from 'materialize-css/dist/js/materialize.min.js'
 const LocalHeadlines = ()=>{
 	const [data, setData] = useState([]);
 
+
     useEffect( () =>{
         const fetchApi = async() =>{
             setData(await fetchData());
@@ -32,11 +33,11 @@ const LocalHeadlines = ()=>{
     	<div>
             <div className="row">
                 {
-                    data.map( data=>(
-                       <div className="col s12 m6 l6">
+                    data.map( (data, index)=>(
+                       <div key={index} className="col s12 m6 l6">
                             <div className="card">
                                 <div className="card-image">
-                                  <img  src={data.urlToImage} alt="headline image"></img>
+                                  <img  src={data.urlToImage} ></img>
                                   <span className="card-title">{data.title}</span>
                                 </div>
 
@@ -50,7 +51,7 @@ const LocalHeadlines = ()=>{
                                 </div>
                             </div>
                         </div>
-                    ))
+                   ))
                 }
             </div>
 
@@ -91,7 +92,7 @@ export const GlobalHeadlines = () =>{
                            <div className="col s12 m6 l6">
                                 <div className="card">
                                     <div className="card-image">
-                                      <img  src={data.urlToImage} alt="headline image" ></img>
+                                      <img  src={data.urlToImage} ></img>
                                       <span className="card-title">{data.title}</span>
                                     </div>
 
@@ -134,20 +135,20 @@ const Headlines = () =>{
         <div>
             <div className="container">
                 
-                  <div class="row">
+                  <div className="row">
 
-                    <div class="col s12 m12 l12">
+                    <div className="col s12 m12 l12">
                         {
-                            news == "local" ? (
-                             <div class="card green">
-                                <div class="card-content white-text">
+                            news === "local" ? (
+                             <div className="card green">
+                                <div className="card-content white-text">
                                   South african Covid19 News
                                 </div>
                                 
                               </div> 
                             ): (
-                               <div class="card blue">
-                                <div class="card-content white-text">
+                               <div className="card blue">
+                                <div className="card-content white-text">
                                   International Covid19 News
                                 </div>
                                 
@@ -171,7 +172,7 @@ const Headlines = () =>{
 
 
                 <div className="row">
-                   {news == 'local' ?
+                   {news === 'local' ?
                     <LocalHeadlines></LocalHeadlines>
                     :
                     <GlobalHeadlines></GlobalHeadlines>
