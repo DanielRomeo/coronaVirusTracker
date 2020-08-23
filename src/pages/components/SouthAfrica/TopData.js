@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 // import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Line, Bar } from 'react-chartjs-2';
+import styles from '../Cards/Cards.module.css';
 
 const TopData = ()=>{
 
@@ -39,7 +40,7 @@ const TopData = ()=>{
                 data={{
                     labels: ["confirmed", "recoveries", "deaths"],
                     datasets: [{
-                        label: 'My First dataset',
+                        label: 'Cases/Recoveries and Deaths',
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: [mydata[0], mydata[1], mydata[2]],
@@ -66,6 +67,27 @@ const TopData = ()=>{
 
     return(
     	<div className="container">
+
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div className="col s12 m4 l4">
+                        <div className="card blue-grey darken-1 hoverable">
+                            <div className="card-content white-text">
+                                <span className="card-title">Recovery Rate</span>
+                                
+                                   <h3>{Math.ceil( (mydata[1]/mydata[0])*100 )}%</h3>
+                                    
+                            </div>
+
+                            <div className="card-action">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
     		<div className="row">
     			
     			<div className="col s12 m12 l12">

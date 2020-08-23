@@ -6,6 +6,7 @@ import TopData from './components/SouthAfrica/TopData.js';
 import BottomData from './components/SouthAfrica/BottomData.js';
 // import axios from 'axios';
 
+
 const SouthAfrica = ()=>{
 
 	
@@ -16,10 +17,11 @@ const SouthAfrica = ()=>{
 	    	
 	    		<TopData></TopData>
 
+	    		<div></div>
+
 	    		<LatestConfirmedCases></LatestConfirmedCases>
 				
 				<br />
-				<BottomData></BottomData>
 	    </div>  
     )
 }

@@ -18,7 +18,7 @@ const LatestConfirmedCases = ()=>{
 	const fetchData = async () =>{
 
 		// gest total number of confirmed cases from  aperiod to a period
-		const url = 'https://api.covid19api.com/total/country/south-africa/status/confirmed?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z';
+		const url = 'https://api.covid19api.com/total/country/south-africa/status/confirmed?from=2020-06-01T00:00:00Z&to=2020-08-01T00:00:00Z';
 
 		try {
 			const { data } = await axios.get(url);
@@ -41,14 +41,14 @@ const LatestConfirmedCases = ()=>{
     					data={{
     						labels: data.map(data=> data.Date),
 					        datasets: [{
-					            label: 'My First dataset',
+					            label: 'Grdual increase in cases from June till August',
 					            backgroundColor: 'rgb(255, 99, 132)',
 					            borderColor: 'rgb(255, 99, 132)',
 					            data: data.map( data=> (data.Cases) )
 					        }]
     					}}
 						  width={200}
-						  height={200}
+						  height={450}
 						  options={{ maintainAspectRatio: false }}
     				>	
     				</Bar>
